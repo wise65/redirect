@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Office Redirect Admin Dashboard</title>
+  <link rel="stylesheet" href="admin_style.css">
+</head>
+<body>
+  <header>
+    <h1>Office Redirect Admin Dashboard</h1>
+  </header>
+
+  <main class="card">
+    <h2>Select Landing Page</h2>
+    <div class="form-group">
+      <label for="landingPage">Choose a landing page:</label>
+      <select id="landingPage">
+        <option value="365.html">365</option>
+        <option value="adobe.html">Adobe</option>
+        <option value="office365.html">Office365</option>
+        <option value="rincentral.html">RingCentral</option>
+        <option value="voice.html">Voice</option>
+        <option value="docu.html">DocuSign</option>
+      </select>
+    </div>
+    <button onclick="createLink()">Generate Link</button>
+    <p id="result"></p>
+  </main>
+
+  <footer>
+    <p>© 2025 Office Redirect Dashboard</p>
+  </footer>
+
+  <script src="admin.js"></script>
+</body>
+</html>
