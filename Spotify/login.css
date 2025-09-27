@@ -1,0 +1,266 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        
+        body {
+            padding-top: 50px;
+            padding-bottom: 0;
+            background: linear-gradient(rgba(0, 0, 0, 0.84), rgb(0, 0, 0) 100%);
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .lautaro {
+            background-color: #121212;
+            border-radius: 10px;
+            padding: 30px;
+            width: 90%;
+            max-width: 700px;
+            margin: 0 auto;
+            text-align: center;
+            flex: 1;
+        }
+        
+        .barella {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .barella img {
+            max-width: 40%;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+        
+        .bastoni {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .calhanoglu {
+            border-top: 1px solid #333;
+            margin: 30px 0;
+            width: 70%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .thuram {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 45%; 
+            padding: 12px;
+            border-radius: 30px;
+            border: 1px solid #727272;
+            background-color: transparent;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            margin-bottom: 8px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+            margin-left: auto;
+            margin-right: auto;
+            position: relative;
+            padding-left: 40px; 
+        }
+        
+        .thuram:last-of-type {
+            margin-bottom: 30px;
+        }
+        
+        .thuram:hover {
+            background-color: #333;
+        }
+        
+        .thuram img {
+            position: absolute;
+            left: 20px; 
+            width: 24px;
+            height: 24px;
+            margin-left: 15px;
+        }
+        
+        .dimarco {
+            position: relative;
+            margin-bottom: 15px;
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            text-align: center;
+        }
+        
+        .dimarco:first-of-type {
+            margin-top: 30px;
+        }
+        
+        .dimarco label {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 14px;
+            text-align: left;
+            width: 45%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .dimarco input {
+            width: 45%;
+            padding: 10px;
+            padding-right: 40px;
+            background-color: #121212;
+            border: 1px solid #333;
+            border-radius: 4px;
+            color: white;
+            font-size: 14px;
+            outline: none; 
+            box-shadow: none; 
+        }
+        
+        .sommer {
+            position: absolute;
+            right: calc(27.5% + 10px);
+            top: 33px;
+            cursor: pointer;
+            color: #727272;
+            background: none;
+            border: none;
+            outline: none;
+            z-index: 2;
+        }
+        
+        .mkhitaryan {
+            width: 45%;
+            padding: 15px;
+            border-radius: 30px;
+            border: none;
+            background-color: #1cd760;
+            color: black;
+            font-weight: bold;
+            font-size: 14px;
+            cursor: pointer;
+            margin-top: 8px;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .mkhitaryan:hover {
+            transform: scale(1.02);
+        }
+        
+        .acerbi {
+            display: block;
+            margin-top: 30px;
+            text-align: center;
+            color: white;
+            text-decoration: underline;
+            font-size: 14px;
+            font-weight: bold;
+            transition: color 0.2s;
+        }
+        
+        .acerbi:hover {
+            color: #1cd760;
+        }
+        
+        .dumfries {
+            display: block;
+            margin-top: 40px;
+            text-align: center;
+            color: #b3b3b3; 
+            font-size: 14px;
+            font-weight: bold;
+        }
+        
+        .zanetti {
+            color: white;
+            text-decoration: underline;
+            transition: color 0.2s;
+        }
+        
+        .zanetti:hover {
+            color: #1cd760;
+        }
+        
+        .cambiasso {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 0;
+        }
+        
+        .cambiasso img {
+            max-width: 100%;
+            display: block;
+            
+        }
+        
+        @media (max-width: 768px) {
+            .lautaro {
+                width: 95%;
+                padding: 20px;
+            }
+            
+            .barella img {
+                max-width: 60%;
+            }
+            
+            .thuram {
+                width: 65%; 
+            }
+            
+            .dimarco input, .dimarco label, .mkhitaryan {
+                width: 55%;
+            }
+            
+            .sommer {
+                right: calc(22.5% + 10px);
+            }
+            
+            .calhanoglu {
+                width: 80%;
+            }
+            
+            .cambiasso {
+                display: none;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding-top: 0px;
+            }
+            
+            .lautaro {
+                border-radius: 0;
+                width: 100%;
+                min-height: 100vh;
+            }
+            
+            .barella img {
+                max-width: 70%;
+            }
+            
+            .thuram {
+                width: 80%; 
+            }
+            
+            .dimarco input, .dimarco label, .mkhitaryan {
+                width: 75%;
+            }
+            
+            .sommer {
+                right: calc(12.5% + 10px);
+            }
+            
+            .calhanoglu {
+                width: 90%;
+            }
+        }
